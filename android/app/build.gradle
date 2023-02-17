@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 
 android {
   compileSdkVersion rootProject.ext.compileSdkVersion
@@ -44,6 +45,7 @@ dependencies {
   implementation("com.google.firebase:firebase-messaging:23.1.1")
   implementation platform('com.google.firebase:firebase-bom:31.2.2')
   implementation 'com.google.firebase:firebase-analytics'
+  implementation 'androidx.lifecycle:lifecycle-process:2.4.0'
   implementation project(':capacitor-cordova-android-plugins')
 }
 

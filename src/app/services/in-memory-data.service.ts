@@ -1,11 +1,16 @@
 import {Injectable} from '@angular/core';
 import {InMemoryDbService} from "angular-in-memory-web-api";
 import {Hero} from "../models/hero";
+import {MoECapacitorCore, MoEProperties} from "capacitor-moengage-core";
+import {RootService} from "./root.service";
 
 @Injectable({
   providedIn: 'root'
 })
 export class InMemoryDataService implements InMemoryDbService {
+
+  constructor(public messageService : RootService) {
+  }
   createDb() {
     const heroes = [
       {id: 12, name: 'Dr. Nice'},
@@ -18,6 +23,14 @@ export class InMemoryDataService implements InMemoryDbService {
       {id: 19, name: 'Magma'},
       {id: 20, name: 'Tornado'}
     ];
+    const prop: MoEProperties = {
+      isNonInteractive : true
+    }
+    MoECapacitorCore.trackEvent({
+      eventName: "DB_CREATED",
+      eventAttributes: prop,
+      appId: this.messageService.appId
+    })
     return {heroes};
   }
 

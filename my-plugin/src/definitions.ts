@@ -1,5 +1,5 @@
 export interface MyPluginPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  echo(options: { value: string }): void;
 
   openMap(location: { latitude: number; longitude: number }): Promise<void>;
 }

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+  <exlude
+    domain="database"
+    path="MOEInteractions" />
+  <exlude
+    domain="sharedpref"
+    path="pref_moe.xml" />
+</full-backup-content>

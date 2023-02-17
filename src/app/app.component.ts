@@ -6,10 +6,7 @@ import {MoECapacitorCore} from "capacitor-moengage-core";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
+export class AppComponent{
   title = 'SampleHybridApp';
 
-  ngOnInit(): void {
-    MoECapacitorCore.initialize({appId : ""})
-  }
 }

@@ -4,6 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
 
 import {HeroService} from '../services/hero.service';
+import {MoECapacitorCore, MoEProperties} from "capacitor-moengage-core";
 
 @Component({
   selector: 'app-hero-detail',
@@ -32,12 +33,50 @@ export class HeroDetailComponent {
 
   goBack(): void {
     this.location.back();
+    const prop: MoEProperties = {
+      generalAttributes: [
+        {
+          name: 'screen_loaction',
+          value: `${this.location}`
+        }
+      ],
+      dateTimeAttributes : [
+        {
+          name : 'event_occur_at',
+          value : Date()
+        }
+      ]
+    }
+    MoECapacitorCore.trackEvent({
+      eventName: "BACK_PRESSED",
+      eventAttributes: prop,
+      appId: this.heroService.messageService.appId
+    })
   }
 
   save(): void {
     if (this.hero) {
       this.heroService.updateHero(this.hero)
         .subscribe(() => this.goBack());
+      const prop: MoEProperties = {
+        generalAttributes: [
+          {
+            name: 'hero_name',
+            value: `${this.hero}`
+          }
+        ],
+        dateTimeAttributes : [
+          {
+            name : 'event_occur_at',
+            value : Date()
+          }
+        ]
+      }
+      MoECapacitorCore.trackEvent({
+        eventName: "UPDATE_HERO",
+        eventAttributes: prop,
+        appId: this.heroService.messageService.appId
+      })
     }
   }
 }
