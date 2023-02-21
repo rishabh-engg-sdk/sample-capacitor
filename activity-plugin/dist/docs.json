@@ -1,0 +1,96 @@
+{
+  "api": {
+    "name": "ActivityPlugin",
+    "slug": "activityplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "registerForActivityCallbacks",
+        "signature": "() => Promise<void>",
+        "parameters": [],
+        "returns": "Promise<void>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "registerforactivitycallbacks"
+      },
+      {
+        "name": "addListener",
+        "signature": "(event: 'onActivityResumed', listenerFunc: OnActivityResumeCallback) => Promise<PluginListenerHandle> & PluginListenerHandle",
+        "parameters": [
+          {
+            "name": "event",
+            "docs": "",
+            "type": "'onActivityResumed'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "OnActivityResumeCallback"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "OnActivityResumeCallback"
+        ],
+        "slug": "addlisteneronactivityresumed"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "PluginListenerHandle",
+      "slug": "pluginlistenerhandle",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "remove",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "() => Promise<void>"
+        }
+      ]
+    },
+    {
+      "name": "ActivityData",
+      "slug": "activitydata",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "activityName",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [
+    {
+      "name": "OnActivityResumeCallback",
+      "slug": "onactivityresumecallback",
+      "docs": "",
+      "types": [
+        {
+          "text": "(event: ActivityData): void",
+          "complexTypes": [
+            "ActivityData"
+          ]
+        }
+      ]
+    }
+  ],
+  "pluginConfigs": []
+}
