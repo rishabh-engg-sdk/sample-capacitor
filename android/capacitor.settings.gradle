@@ -2,8 +2,11 @@
 include ':capacitor-android'
 project(':capacitor-android').projectDir = new File('../node_modules/@capacitor/android/capacitor')
 
+include ':activity-plugin'
+project(':activity-plugin').projectDir = new File('../activity-plugin/android')
+
 include ':capacitor-moengage-core'
 project(':capacitor-moengage-core').projectDir = new File('../node_modules/capacitor-moengage-core/android')
 
-include ':my-plugin'
-project(':my-plugin').projectDir = new File('../my-plugin/android')
+include ':echo-plugin'
+project(':echo-plugin').projectDir = new File('../echo-plugin/android')

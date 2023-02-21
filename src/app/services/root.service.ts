@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {MyPlugin} from "my-plugin";
+import {Echo} from "echo-plugin";
 import {MoECapacitorCore} from "capacitor-moengage-core";
 import {AppComponent} from "../app.component";
 import {AppModule} from "../app.module";
@@ -17,7 +17,7 @@ export class RootService {
 
   add(message: string) {
     this.messages.push(message);
-    MyPlugin.echo({value: message})
+    Echo.echo({value: message})
   }
 
   clear() {

@@ -23,9 +23,5 @@ class SampleApplication : Application() {
       )
       .configureLogs(LogConfig(LogLevel.DEBUG))
     initialiseDefaultInstance(this, moEngage)
-    FirebaseMessaging.getInstance().token.addOnSuccessListener { s: String ->
-      Log.d("SampleApplication", "onCreate: $s")
-      MoEFireBaseHelper.getInstance().passPushToken(this, s)
-    }
   }
 }

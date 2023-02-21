@@ -37,13 +37,13 @@ export class HeroDetailComponent {
       generalAttributes: [
         {
           name: 'screen_loaction',
-          value: `${this.location}`
+          value: JSON.stringify(this.location)
         }
       ],
       dateTimeAttributes : [
         {
           name : 'event_occur_at',
-          value : Date()
+          value : Date.now().toString()
         }
       ]
     }

@@ -4,7 +4,7 @@ import {Hero} from "../models/hero";
 import {RootService} from "./root.service";
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {catchError, tap} from 'rxjs/operators';
-import {MyPlugin} from "my-plugin";
+import {Echo} from "echo-plugin";
 import {MoECapacitorCore} from "capacitor-moengage-core";
 
 @Injectable({
@@ -39,7 +39,7 @@ export class HeroService {
     return (error: any): Observable<T> => {
 
       console.error(error); // log to console instead
-      MyPlugin.echo({value: `${operation} failed: ${error.message}`});
+      Echo.echo({value: `${operation} failed: ${error.message}`});
 
       // Let the app keep running by returning an empty result.
       return of(result as T);
@@ -49,7 +49,7 @@ export class HeroService {
   getHero(id: number): Observable<Hero> {
     const url = `${this.heroesUrl}/${id}`;
     return this.http.get<Hero>(url).pipe(
-      tap(_ => MyPlugin.echo({value: `fetched hero id=${id}`})),
+      tap(_ => Echo.echo({value: `fetched hero id=${id}`})),
       catchError(this.handleError<Hero>(`getHero id=${id}`))
     );
   }
@@ -62,7 +62,7 @@ export class HeroService {
   updateHero(hero: Hero): Observable<any> {
     return this.http.put(this.heroesUrl, hero, this.httpOptions).pipe(
       tap(_ => {
-        MyPlugin.echo({value: `updated hero id=${hero.id}`})
+        Echo.echo({value: `updated hero id=${hero.id}`})
 
         MoECapacitorCore.trackEvent({
           eventName: "HERO_UPDATE",
@@ -92,7 +92,7 @@ export class HeroService {
           },
           appId: this.messageService.appId
         })
-        MyPlugin.echo({value: `added hero w/ id=${newHero.id}`})
+        Echo.echo({value: `added hero w/ id=${newHero.id}`})
       }),
       catchError(this.handleError<Hero>('addHero'))
     );
@@ -112,7 +112,7 @@ export class HeroService {
           },
           appId: this.messageService.appId
         })
-        MyPlugin.echo({value: `deleted hero id=${id}`})
+        Echo.echo({value: `deleted hero id=${id}`})
       }),
       catchError(this.handleError<Hero>('deleteHero'))
     );

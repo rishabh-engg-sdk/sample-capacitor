@@ -5,7 +5,7 @@ First Plugin
 ## Install
 
 ```bash
-npm install my-plugin
+npm install echo-plugin
 npx cap sync
 ```
 
@@ -24,14 +24,12 @@ npx cap sync
 ### echo(...)
 
 ```typescript
-echo(options: { value: string; }) => Promise<{ value: string; }>
+echo(options: { value: string; }) => void
 ```
 
 | Param         | Type                            |
 | ------------- | ------------------------------- |
 | **`options`** | <code>{ value: string; }</code> |
-
-**Returns:** <code>Promise&lt;{ value: string; }&gt;</code>
 
 --------------------
 

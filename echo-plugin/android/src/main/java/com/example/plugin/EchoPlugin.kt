@@ -6,8 +6,8 @@ import com.getcapacitor.PluginCall
 import com.getcapacitor.PluginMethod
 import com.getcapacitor.annotation.CapacitorPlugin
 
-@CapacitorPlugin(name = "MyPlugin")
-class MyPluginPlugin : Plugin() {
+@CapacitorPlugin(name = "Echo")
+class EchoPlugin : Plugin() {
   private val logger = Logger()
 
 

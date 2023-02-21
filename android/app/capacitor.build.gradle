@@ -9,8 +9,9 @@ android {
 
 apply from: "../capacitor-cordova-android-plugins/cordova.variables.gradle"
 dependencies {
+    implementation project(':activity-plugin')
     implementation project(':capacitor-moengage-core')
-    implementation project(':my-plugin')
+    implementation project(':echo-plugin')
 
 }
 
