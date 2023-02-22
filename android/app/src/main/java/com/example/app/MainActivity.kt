@@ -8,8 +8,12 @@ import com.moengage.capacitor.MoECapacitorCorePlugin
 
 class MainActivity : BridgeActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
-    registerPlugins(listOf(MoECapacitorCorePlugin::class.java, EchoPlugin::class.java,
-      ActivityPlugin::class.java))
+    registerPlugins(
+      listOf(
+        MoECapacitorCorePlugin::class.java, EchoPlugin::class.java,
+        ActivityPlugin::class.java
+      )
+    )
     super.onCreate(savedInstanceState)
   }
 }

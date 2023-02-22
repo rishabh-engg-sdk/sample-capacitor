@@ -67,5 +67,8 @@
     "android": {
       "src": "android"
     }
+  },
+  "dependencies": {
+    "install": "^0.13.0"
   }
 }

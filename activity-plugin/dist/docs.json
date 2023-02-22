@@ -17,6 +17,54 @@
       },
       {
         "name": "addListener",
+        "signature": "(event: 'onActivityCreated', listenerFunc: OnActivityResumeCallback) => Promise<PluginListenerHandle> & PluginListenerHandle",
+        "parameters": [
+          {
+            "name": "event",
+            "docs": "",
+            "type": "'onActivityCreated'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "OnActivityResumeCallback"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "OnActivityResumeCallback"
+        ],
+        "slug": "addlisteneronactivitycreated"
+      },
+      {
+        "name": "addListener",
+        "signature": "(event: 'onActivityStarted', listenerFunc: OnActivityResumeCallback) => Promise<PluginListenerHandle> & PluginListenerHandle",
+        "parameters": [
+          {
+            "name": "event",
+            "docs": "",
+            "type": "'onActivityStarted'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "OnActivityResumeCallback"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "OnActivityResumeCallback"
+        ],
+        "slug": "addlisteneronactivitystarted"
+      },
+      {
+        "name": "addListener",
         "signature": "(event: 'onActivityResumed', listenerFunc: OnActivityResumeCallback) => Promise<PluginListenerHandle> & PluginListenerHandle",
         "parameters": [
           {
@@ -38,6 +86,102 @@
           "OnActivityResumeCallback"
         ],
         "slug": "addlisteneronactivityresumed"
+      },
+      {
+        "name": "addListener",
+        "signature": "(event: 'onActivityPaused', listenerFunc: OnActivityResumeCallback) => Promise<PluginListenerHandle> & PluginListenerHandle",
+        "parameters": [
+          {
+            "name": "event",
+            "docs": "",
+            "type": "'onActivityPaused'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "OnActivityResumeCallback"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "OnActivityResumeCallback"
+        ],
+        "slug": "addlisteneronactivitypaused"
+      },
+      {
+        "name": "addListener",
+        "signature": "(event: 'onActivityStopped', listenerFunc: OnActivityResumeCallback) => Promise<PluginListenerHandle> & PluginListenerHandle",
+        "parameters": [
+          {
+            "name": "event",
+            "docs": "",
+            "type": "'onActivityStopped'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "OnActivityResumeCallback"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "OnActivityResumeCallback"
+        ],
+        "slug": "addlisteneronactivitystopped"
+      },
+      {
+        "name": "addListener",
+        "signature": "(event: 'onActivitySaveInstanceState', listenerFunc: OnActivityResumeCallback) => Promise<PluginListenerHandle> & PluginListenerHandle",
+        "parameters": [
+          {
+            "name": "event",
+            "docs": "",
+            "type": "'onActivitySaveInstanceState'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "OnActivityResumeCallback"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "OnActivityResumeCallback"
+        ],
+        "slug": "addlisteneronactivitysaveinstancestate"
+      },
+      {
+        "name": "addListener",
+        "signature": "(event: 'onActivityDestroyed', listenerFunc: OnActivityResumeCallback) => Promise<PluginListenerHandle> & PluginListenerHandle",
+        "parameters": [
+          {
+            "name": "event",
+            "docs": "",
+            "type": "'onActivityDestroyed'"
+          },
+          {
+            "name": "listenerFunc",
+            "docs": "",
+            "type": "OnActivityResumeCallback"
+          }
+        ],
+        "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "PluginListenerHandle",
+          "OnActivityResumeCallback"
+        ],
+        "slug": "addlisteneronactivitydestroyed"
       }
     ],
     "properties": []

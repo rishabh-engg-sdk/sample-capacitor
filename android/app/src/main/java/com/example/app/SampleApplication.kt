@@ -17,11 +17,9 @@ class SampleApplication : Application() {
     val moEngage = MoEngage.Builder(this, "DAO6UGZ73D9RTK8B5W96TPYN")
       .configureNotificationMetaData(
         NotificationConfig(
-          R.drawable.ic_launcher_background, R
-            .drawable.ic_launcher_foreground
+          R.drawable.ic_launcher_background, R.drawable.ic_launcher_foreground
         )
-      )
-      .configureLogs(LogConfig(LogLevel.DEBUG))
+      ).configureLogs(LogConfig(LogLevel.DEBUG))
     initialiseDefaultInstance(this, moEngage)
   }
 }
