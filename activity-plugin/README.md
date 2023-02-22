@@ -1,6 +1,6 @@
-# activity-plugin
+# calculate-plugin
 
-Activity Related
+Mathematical Calculation Related
 
 ## Install
 
