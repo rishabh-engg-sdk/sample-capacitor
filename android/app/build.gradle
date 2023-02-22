@@ -4,7 +4,7 @@ apply plugin: 'kotlin-android'
 android {
   compileSdkVersion rootProject.ext.compileSdkVersion
   defaultConfig {
-    applicationId "com.example.app"
+    applicationId "com.capacitor.example"
     minSdkVersion rootProject.ext.minSdkVersion
     targetSdkVersion rootProject.ext.targetSdkVersion
     versionCode 1

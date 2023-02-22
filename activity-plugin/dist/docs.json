@@ -1,33 +1,41 @@
 {
   "api": {
-    "name": "ActivityPlugin",
-    "slug": "activityplugin",
+    "name": "CalculatePlugin",
+    "slug": "calculateplugin",
     "docs": "",
     "tags": [],
     "methods": [
       {
-        "name": "registerForActivityCallbacks",
-        "signature": "() => Promise<void>",
-        "parameters": [],
+        "name": "calculate",
+        "signature": "(calculateData: CalculateData) => Promise<void>",
+        "parameters": [
+          {
+            "name": "calculateData",
+            "docs": "",
+            "type": "CalculateData"
+          }
+        ],
         "returns": "Promise<void>",
         "tags": [],
         "docs": "",
-        "complexTypes": [],
-        "slug": "registerforactivitycallbacks"
+        "complexTypes": [
+          "CalculateData"
+        ],
+        "slug": "calculate"
       },
       {
         "name": "addListener",
-        "signature": "(event: 'onActivityCreated', listenerFunc: OnActivityResumeCallback) => Promise<PluginListenerHandle> & PluginListenerHandle",
+        "signature": "(event: 'onCalculate', listenerFunc: OnCalculateEventCallback) => Promise<PluginListenerHandle> & PluginListenerHandle",
         "parameters": [
           {
             "name": "event",
             "docs": "",
-            "type": "'onActivityCreated'"
+            "type": "'onCalculate'"
           },
           {
             "name": "listenerFunc",
             "docs": "",
-            "type": "OnActivityResumeCallback"
+            "type": "OnCalculateEventCallback"
           }
         ],
         "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
@@ -35,158 +43,39 @@
         "docs": "",
         "complexTypes": [
           "PluginListenerHandle",
-          "OnActivityResumeCallback"
+          "OnCalculateEventCallback"
         ],
-        "slug": "addlisteneronactivitycreated"
-      },
-      {
-        "name": "addListener",
-        "signature": "(event: 'onActivityStarted', listenerFunc: OnActivityResumeCallback) => Promise<PluginListenerHandle> & PluginListenerHandle",
-        "parameters": [
-          {
-            "name": "event",
-            "docs": "",
-            "type": "'onActivityStarted'"
-          },
-          {
-            "name": "listenerFunc",
-            "docs": "",
-            "type": "OnActivityResumeCallback"
-          }
-        ],
-        "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
-        "tags": [],
-        "docs": "",
-        "complexTypes": [
-          "PluginListenerHandle",
-          "OnActivityResumeCallback"
-        ],
-        "slug": "addlisteneronactivitystarted"
-      },
-      {
-        "name": "addListener",
-        "signature": "(event: 'onActivityResumed', listenerFunc: OnActivityResumeCallback) => Promise<PluginListenerHandle> & PluginListenerHandle",
-        "parameters": [
-          {
-            "name": "event",
-            "docs": "",
-            "type": "'onActivityResumed'"
-          },
-          {
-            "name": "listenerFunc",
-            "docs": "",
-            "type": "OnActivityResumeCallback"
-          }
-        ],
-        "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
-        "tags": [],
-        "docs": "",
-        "complexTypes": [
-          "PluginListenerHandle",
-          "OnActivityResumeCallback"
-        ],
-        "slug": "addlisteneronactivityresumed"
-      },
-      {
-        "name": "addListener",
-        "signature": "(event: 'onActivityPaused', listenerFunc: OnActivityResumeCallback) => Promise<PluginListenerHandle> & PluginListenerHandle",
-        "parameters": [
-          {
-            "name": "event",
-            "docs": "",
-            "type": "'onActivityPaused'"
-          },
-          {
-            "name": "listenerFunc",
-            "docs": "",
-            "type": "OnActivityResumeCallback"
-          }
-        ],
-        "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
-        "tags": [],
-        "docs": "",
-        "complexTypes": [
-          "PluginListenerHandle",
-          "OnActivityResumeCallback"
-        ],
-        "slug": "addlisteneronactivitypaused"
-      },
-      {
-        "name": "addListener",
-        "signature": "(event: 'onActivityStopped', listenerFunc: OnActivityResumeCallback) => Promise<PluginListenerHandle> & PluginListenerHandle",
-        "parameters": [
-          {
-            "name": "event",
-            "docs": "",
-            "type": "'onActivityStopped'"
-          },
-          {
-            "name": "listenerFunc",
-            "docs": "",
-            "type": "OnActivityResumeCallback"
-          }
-        ],
-        "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
-        "tags": [],
-        "docs": "",
-        "complexTypes": [
-          "PluginListenerHandle",
-          "OnActivityResumeCallback"
-        ],
-        "slug": "addlisteneronactivitystopped"
-      },
-      {
-        "name": "addListener",
-        "signature": "(event: 'onActivitySaveInstanceState', listenerFunc: OnActivityResumeCallback) => Promise<PluginListenerHandle> & PluginListenerHandle",
-        "parameters": [
-          {
-            "name": "event",
-            "docs": "",
-            "type": "'onActivitySaveInstanceState'"
-          },
-          {
-            "name": "listenerFunc",
-            "docs": "",
-            "type": "OnActivityResumeCallback"
-          }
-        ],
-        "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
-        "tags": [],
-        "docs": "",
-        "complexTypes": [
-          "PluginListenerHandle",
-          "OnActivityResumeCallback"
-        ],
-        "slug": "addlisteneronactivitysaveinstancestate"
-      },
-      {
-        "name": "addListener",
-        "signature": "(event: 'onActivityDestroyed', listenerFunc: OnActivityResumeCallback) => Promise<PluginListenerHandle> & PluginListenerHandle",
-        "parameters": [
-          {
-            "name": "event",
-            "docs": "",
-            "type": "'onActivityDestroyed'"
-          },
-          {
-            "name": "listenerFunc",
-            "docs": "",
-            "type": "OnActivityResumeCallback"
-          }
-        ],
-        "returns": "Promise<PluginListenerHandle> & PluginListenerHandle",
-        "tags": [],
-        "docs": "",
-        "complexTypes": [
-          "PluginListenerHandle",
-          "OnActivityResumeCallback"
-        ],
-        "slug": "addlisteneronactivitydestroyed"
+        "slug": "addlisteneroncalculate"
       }
     ],
     "properties": []
   },
   "interfaces": [
+    {
+      "name": "CalculateData",
+      "slug": "calculatedata",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "operator",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [
+            "Operator"
+          ],
+          "type": "Operator"
+        },
+        {
+          "name": "operand",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "{ a: number; b: number; }"
+        }
+      ]
+    },
     {
       "name": "PluginListenerHandle",
       "slug": "pluginlistenerhandle",
@@ -204,33 +93,69 @@
       ]
     },
     {
-      "name": "ActivityData",
-      "slug": "activitydata",
+      "name": "CalculateEventData",
+      "slug": "calculateeventdata",
       "docs": "",
       "tags": [],
       "methods": [],
       "properties": [
         {
-          "name": "activityName",
+          "name": "calculateData",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [
+            "CalculateData"
+          ],
+          "type": "CalculateData"
+        },
+        {
+          "name": "result",
           "tags": [],
           "docs": "",
           "complexTypes": [],
-          "type": "string"
+          "type": "number"
         }
       ]
     }
   ],
-  "enums": [],
+  "enums": [
+    {
+      "name": "Operator",
+      "slug": "operator",
+      "members": [
+        {
+          "name": "ADD",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "SUBTRACT",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "MULTIPLY",
+          "tags": [],
+          "docs": ""
+        },
+        {
+          "name": "DIVISION",
+          "tags": [],
+          "docs": ""
+        }
+      ]
+    }
+  ],
   "typeAliases": [
     {
-      "name": "OnActivityResumeCallback",
-      "slug": "onactivityresumecallback",
+      "name": "OnCalculateEventCallback",
+      "slug": "oncalculateeventcallback",
       "docs": "",
       "types": [
         {
-          "text": "(event: ActivityData): void",
+          "text": "(calculateEventData: CalculateEventData): void",
           "complexTypes": [
-            "ActivityData"
+            "CalculateEventData"
           ]
         }
       ]

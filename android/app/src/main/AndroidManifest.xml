@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:tools="http://schemas.android.com/tools"
-  package="com.example.app">
+  package="com.capacitor.example">
 
   <uses-permission android:name="android.permission.INTERNET" />
   <application
-    android:name="com.example.app.SampleApplication"
+    android:name="com.capacitor.example.SampleApplication"
     android:allowBackup="true"
     android:dataExtractionRules="@xml/new_backup_descriptor_config"
     android:fullBackupContent="@xml/old_backup_descriptor_config"
@@ -17,7 +16,7 @@
 
 
     <activity
-      android:name=".MainActivity"
+      android:name="com.capacitor.example.MainActivity"
       android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
       android:exported="true"
       android:label="@string/title_activity_main"

@@ -1,13 +1,23 @@
 var capacitorActivity = (function (exports, core) {
-	'use strict';
+    'use strict';
 
-	const Activity = core.registerPlugin('Activity');
+    exports.Operator = void 0;
+    (function (Operator) {
+        Operator[Operator["ADD"] = 0] = "ADD";
+        Operator[Operator["SUBTRACT"] = 1] = "SUBTRACT";
+        Operator[Operator["MULTIPLY"] = 2] = "MULTIPLY";
+        Operator[Operator["DIVISION"] = 3] = "DIVISION";
+    })(exports.Operator || (exports.Operator = {}));
 
-	exports.Activity = Activity;
+    const Activity = core.registerPlugin('Activity', {});
+    const Calculate = core.registerPlugin('Calculate', {});
 
-	Object.defineProperty(exports, '__esModule', { value: true });
+    exports.Activity = Activity;
+    exports.Calculate = Calculate;
 
-	return exports;
+    Object.defineProperty(exports, '__esModule', { value: true });
+
+    return exports;
 
 })({}, capacitorExports);
 //# sourceMappingURL=plugin.js.map

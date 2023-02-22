@@ -1,8 +1,9 @@
-import { registerPlugin } from '@capacitor/core';
+import {registerPlugin} from '@capacitor/core';
 
-import type { ActivityPlugin } from './definitions';
+import type {ActivityPlugin, CalculatePlugin} from './definitions';
 
-const Activity = registerPlugin<ActivityPlugin>('Activity');
+const Activity = registerPlugin<ActivityPlugin>('Activity', {});
+const Calculate = registerPlugin<CalculatePlugin>('Calculate', {});
 
 export * from './definitions';
-export { Activity };
+export {Activity, Calculate};

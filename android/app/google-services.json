@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:615448685370:android:6d75bcba72eb0cc3",
         "android_client_info": {
-          "package_name": "com.example.app"
+          "package_name": "com.capacitor.example"
         }
       },
       "oauth_client": [
