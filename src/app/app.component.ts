@@ -9,21 +9,21 @@ import {Activity} from "activity-plugin";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit{
-  title = 'SampleHybridApp';
+export class AppComponent implements OnInit {
+  title = 'Sample Capacitor';
   tag = "AppComponent"
   appId = "DAO6UGZ73D9RTK8B5W96TPYN"
 
   ngOnInit(): void {
 
-    Activity.registerForActivityCallbacks()
     Activity.addListener(
       "onActivityResumed",
-      (activityData)=>{
-        Echo.echo({value :  `onActivityResume() : ${JSON.stringify(activityData)}`})
-        MoECapacitorCore.showInApp({appId : this.appId})
+      (activityData) => {
+        Echo.echo({value: `onActivityResume() : ${JSON.stringify(activityData)}`})
+        MoECapacitorCore.showInApp({appId: this.appId})
       }
     )
+    Activity.registerForActivityCallbacks()
 
     MoECapacitorCore.addListener("pushTokenGenerated", (moEPushTokenData) => {
       Echo.echo({"value": `${this.tag} pushTokenGenerated: ${JSON.stringify(moEPushTokenData)}`})
